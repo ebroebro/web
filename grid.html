@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>grid</title>
+    <style>
+        #grid{
+            border:5px solid pink;
+            display: grid;
+            grid-template-columns: 150px 1fr;
+            /* 같은 columns에 두겠다 */
+            /* fr은 자동으로 만들겠다 */
+        }
+        div{
+            border:5px solid gray;
+        }
+    </style>
+</head>
+<body>
+    <div id="grid">
+        <div>navigation</div>
+        <!-- div :block level 이고 아무 의미 없음 -->
+        <!-- span도 비슷한 효과 -->
+        <div>article</div>
+    </div>
+</body>
+</html>

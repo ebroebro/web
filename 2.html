@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="ko">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>css</title>
+        <style>
+            a{
+                color : black;
+            }
+            p{
+                color: pink;
+            }
+            h1:first-child{
+                font-size: xx-large;
+                text-align: center;
+            }
+            .active
+            {
+                color:red;
+            }
+            /* 순서에 따라 덮어 쓰기가 되는것 */
+            #active{
+                color:skyblue;
+            }
+            .saw{
+                color:greenyellow; 
+            }
+            
+            /* .을 붙이면 class가 saw인 태그 */
+           
+            /* id > class >선택자 순위 같으면? 나중에 나온게 적용 */
+            /* 더 구체적일수록 더 갯수가 적을수록 우선 */
+            /* 심지어 id는 하나여야한다. */
+            
+        </style>
+    </head>
+    <body>
+        <h1>WEB</h1>
+        <ol>
+            <li><a href="https://www.naver.com" class="saw">네이버</a></li>
+            <li><a href="index.html" class="saw active">메인페이지</a></li>
+            <!-- class는 띄어쓰기로 두개줄수 있다!! -->
+            <li><a href="index.html" class="saw" id="active">메인페이지2</a></li>
+            <li><a href="2.html">css현재페이지</a></li>
+        </ol>
+        
+
+
+        <p>
+            CSS 는 구체적으로 어떤 스타일로 요소가 표시 되는지를 정하는 규격이라고 할 수 있습니다. 초기의 웹은 HTML 하나로 문서의 뼈대
+            도 만들고 꾸미기도 함께 하였지만,
+        </p>
+        <h1 style="color:blue;font-size: 30px;">이것도 css의 일부이다.</h1>
+    </body>
+
+    <!--아 이렇게 쓰는거구나-->
+</html>

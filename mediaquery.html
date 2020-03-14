@@ -1,0 +1,32 @@
+<!-- 화면에 따라서 다르게 해주고 싶다면 media query 사용 -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        div{
+            border:10px solid green;
+            font-size:60px;
+        }
+        /* screen width > 800px */
+        /* 최소 800px 부터 적용 시키겠다. */
+        @media(min-width:800px){    
+            div{
+                display:none;
+            }
+        }
+        @media(max-width:550px){
+            div{
+                display:inline;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div>
+        responsive
+    </div>
+</body>
+</html>

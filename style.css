@@ -1,0 +1,44 @@
+a{
+    color:black;
+    text-decoration: none;
+}
+h1{
+    font-size:45px;
+    text-align : center;
+    border-bottom: solid 5px black;
+    margin : 0px;
+    padding:20px; 
+}
+/* id값이 grid인것 아래의 ol 태그 */
+#grid ol{
+    border-right:1px solid gray;
+    width:100px;
+    margin:0px;
+    padding:20px;
+    padding-left:32px;
+}
+body{
+    margin : 0;
+}
+p{
+    display:flex;
+}
+#grid{
+    display:grid;
+    grid-template-columns: 150px 1fr;
+}
+#article{
+    padding-left:15px;
+}
+/* 800px보다 작을때 적용시키겠 */
+@media(max-width:550px){
+    #grid{
+    display:block;
+    }
+    #grid ol{
+        border-right:none;
+    }
+    h1{
+        border-bottom: none;
+    }
+}
