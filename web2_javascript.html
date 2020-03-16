@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+        // 함수사용
+        function nightdayHandler(self){
+            var tmp=document.querySelector('body')
+            var alist=document.querySelectorAll('a');
+            if(self.value ==='night'){
+                tmp.style.color='black';
+                tmp.style.backgroundColor='yellow';
+                self.value='day';
+                for(var i=0 ; i<alist.length;i++){
+                    alist[i].style.color='blue';
+                }
+            }
+            else{
+                tmp.style.backgroundColor='black';
+                tmp.style.color='white';
+                self.value='night';
+                for(var i=0 ; i<alist.length;i++){
+                    alist[i].style.color='skyblue';
+                }
+            }
+        }
+        
+    </script>
+
+</head>
+<body>
+    <h1>onclick button</h1>
+
+    <input type="button" value="night" onclick="
+    document.querySelector('body').style.backgroundColor='black';
+    document.querySelector('body').style.color='white';
+    ">
+    <input type="button" value="day" onclick="
+    document.querySelector('body').style.backgroundColor='yellow';
+    document.querySelector('body').style.color='black';
+    ">
+    
+
+
+    <!-- 토글버튼 -->
+    <h1> toggle button</h1>
+    <input id="night_day" type="button" value="night" onclick="
+    nightdayHandler(this)
+    ">
+
+    <hr>
+    <h1>반복문과 배열 활용하기</h1>
+    <h1><a href="index.html">web</a></h1>
+    <ol>
+        <li><a href="1.html" style="color: blue";>HTML</a></li>
+        <li><a href="1.html" style="color: blue";>CSS</a></li>
+        <li><a href="1.html" style="color: blue";>JS</a></li>
+    </ol>
+
+
+
+    <hr>
+     <!-- 토글버튼 refactory -->
+    <input id="night_day" type="button" value="night" onclick="
+    var tmp=document.querySelector('body')
+    if(this.value ==='night'){
+        tmp.style.color='black';
+        tmp.style.backgroundColor='yellow';
+        this.value='day';
+    }
+    else{
+        tmp.style.backgroundColor='black';
+        tmp.style.color='white';
+        this.value='night';
+    }
+    ">
+    <hr>
+    <!-- 함수를 이용해 handler 만들기 -->
+    <input id="night_day" type="button" value="night" onclick="
+    nightdayHandler(this)
+    ">
+    <input id="night_day" type="button" value="night" onclick="
+    nightdayHandler(this)
+    ">
+
+    <hr>
+
+    <script>
+        var nick=['engoing','leezche','kim'];
+        nick.push('duru');
+        nick.push('taeho');
+    </script>
+
+    <h1>list & loop</h1>
+    <h2>nickname</h2>
+    <ul>
+        <script>
+            var i=0;
+            while(i<nick.length){
+                document.write('<li>'+nick[i]+'</li>');
+                i=i+1;
+            }
+        </script>
+    </ul>
+    <ol>
+        <script>
+            for(var i=0; i<nick.length; i++){
+                document.write('<li>'+nick[i]+'</li>')
+            }
+        </script>
+    </ol>
+    <hr>
+    <h1>함수 사용하기</h1>
+    <h2>Basic</h2>
+    
+    <h2>Parameter &Argument</h2>
+
+    <h2>Return</h2>
+
+</body>
+</html>
